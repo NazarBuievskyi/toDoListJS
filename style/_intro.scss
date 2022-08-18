@@ -1,0 +1,23 @@
+.intro {
+    form {
+        display: flex;
+        min-height: 20vh;
+        justify-content: center;
+        align-items: center;
+        input, button {
+            padding: 1rem;
+            font-size: 2.8rem;
+            border: none;
+            background: white;
+        }
+        button {
+            cursor: pointer;
+            color: #94bbe9;
+            transition: all 0.3s ease;
+            &:hover {
+                background: #94bbe9;
+                color: white;
+            }
+        }
+    }
+}
