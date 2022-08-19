@@ -10,11 +10,11 @@ html {
     scroll-behavior: smooth;
 }
 body{ 
+    min-height: 100vh;
     color: white;
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(120deg, #94bbe9, #eeaeca);
 }
-
 h1 {
     font-size: $header1;
 }

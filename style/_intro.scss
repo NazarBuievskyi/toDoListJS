@@ -13,11 +13,101 @@
         button {
             cursor: pointer;
             color: #94bbe9;
-            transition: all 0.3s ease;
+            transition: all 0.5s ease;
             &:hover {
                 background: #94bbe9;
                 color: white;
             }
         }
     }
+    .select {
+        margin:  1rem;
+        position: relative;
+        overflow: hidden;
+        &::after{
+            content: '\25BC';
+            position: absolute;
+            background: #94bbe9;
+            top: 0;
+            right: 0;
+            padding: 1rem;
+            pointer-events: none;
+            transition: all 0.5s ease;
+        }
+        &:hover::after {
+            background: white;
+            color: #94bbe9;
+        }
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            outline: none;
+            border: none;
+            color: #94bbe9;
+            width: 13rem;
+            cursor: pointer;
+            padding: 0.95rem;
+            }
+    }
+    .todo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .todo-list {
+            min-width: 30%;
+            
+            .todo {
+                margin: 1rem;
+                background: white;
+                color: black;
+                font-size: 2.8rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                transition: all 0.5s ease;
+                .todo-item {
+                    flex: 1;
+                    padding: 0rem 0.5rem;
+                }
+                .complete-button, .trash-button {
+                    cursor: pointer;
+                    background: white;
+                    border: none;
+                    padding: 1rem;
+                    font-size: 0.5rem;
+                    .fa-trash, .fa-check {
+                        pointer-events: none;
+                    }
+
+                }
+                .complete-button{
+                    color: rgb(72, 192, 72);
+                    transition: all 0.5s ease;
+                    &:hover {
+                        background: rgb(72, 192, 72);
+                        color: white;
+                    }
+                }
+                .trash-button {
+                    color: #da4d4d;
+                    transition: all 0.3s ease;
+                    &:hover {
+                        background: #da4d4d;
+                        color: white;
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
 }
